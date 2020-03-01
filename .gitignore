@@ -1,0 +1,37 @@
+/.vs/*/**
+/.vs/config/applicationhost.config
+/packages/*/**
+#Published API Files
+/API/*/**
+/Scanner.API/bin/*/**
+/Scanner.API.BusinessLogic/bin/*/**
+/Scanner.API.Common/bin/*/**
+/Scanner.API.Model/bin/*/**
+/Scanner.Client/bin/*/**
+/Scanner.Client.BusinessLogic/bin/*/**
+/Scanner.Client.Model/bin/*/**
+/Scanner/bin/*/**
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# exclude local history made by vs studio plugin
+.history/
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
