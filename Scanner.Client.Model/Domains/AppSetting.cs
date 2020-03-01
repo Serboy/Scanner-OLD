@@ -7,5 +7,6 @@
     public class AppUserSetting {
         public string Url { get; set; }
         public string SignIn { get; set; }
+        public string UserPrefix { get; set; }
     }
 }

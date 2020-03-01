@@ -13,11 +13,12 @@ namespace Scanner.Client.BusinessLogic.Services {
             _setting = AppSettingManager.Current.Setting;
         }
 
-        public async Task<User> SignIn(string username, string password, CancellationToken cancellationToken) {
+        public async Task<User> SignIn(string username, string password, bool isUser, CancellationToken cancellationToken) {
             try {
                 var jObj = JObject.FromObject(new {
                     username,
-                    password
+                    password,
+                    isUser
                 });
                 var result = await PostAsync(_setting.BaseService, 
                     $"{_setting.UserService.Url}{_setting.UserService.SignIn}", 

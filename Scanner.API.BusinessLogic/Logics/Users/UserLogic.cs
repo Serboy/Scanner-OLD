@@ -34,7 +34,7 @@ namespace Scanner.API.BusinessLogic.Logics.Users {
             if (user.IsUser.ToBoolSafe())
                 return false;
 
-            var prefix = appSetting.UserAdminAdminPre;
+            var prefix = appSetting.UserAdminPrefix;
 
             return !user.IsUser.ToBoolSafe()
                 && !string.IsNullOrEmpty(user.Username)

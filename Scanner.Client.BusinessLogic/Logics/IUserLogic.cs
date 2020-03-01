@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 namespace Scanner.Client.BusinessLogic.Logics {
     public interface IUserLogic {
+        bool IsAdmin(string username);
         Task<User> SignIn(string username, string password, CancellationToken cancellationToken);
     }
 }
