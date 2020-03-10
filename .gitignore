@@ -1,6 +1,7 @@
 /.vs/*/**
 /.vs/config/applicationhost.config
 /packages/*/**
+/.ide/*/**
 #Published API Files
 /API/*/**
 /Scanner.API/bin/*/**

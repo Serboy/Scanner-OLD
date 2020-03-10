@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
+using Scanner.Client.Common;
 using Scanner.Client.Model.Domains;
 using System;
 using System.IO;
-using System.Reflection;
+using System.Linq;
 
 namespace Scanner.Client.BusinessLogic.Managers {
     public class AppSettingManager {
@@ -19,7 +20,7 @@ namespace Scanner.Client.BusinessLogic.Managers {
         }
 
         public void ReadAppSetting() {
-            var assembly = Assembly.GetCallingAssembly();
+            var assembly = AppConfig.GetAssembly("Scanner.Client");
             var stream = assembly.GetManifestResourceStream("Scanner.Client.Configurations.appsettings.json");
 
             using (var reader = new StreamReader(stream)) {

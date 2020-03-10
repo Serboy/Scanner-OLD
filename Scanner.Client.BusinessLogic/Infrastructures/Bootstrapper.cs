@@ -15,13 +15,14 @@ namespace Scanner.Client.BusinessLogic.Infrastructures {
         public IContainer Container { get; private set; }
         public static Bootstrapper Current => Instance.Value;
 
-        public void Build() { 
-            Container = Builder.Build(); 
+        public void Build() {
+            Container = Builder.Build();
         }
 
         protected void Register() {
             Builder.RegisterModule(new ServiceModule());
             Builder.RegisterModule(new LogicModule());
+            Builder.RegisterModule(new ControllerModule());
         }
     }
 }
